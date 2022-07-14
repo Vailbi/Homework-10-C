@@ -1,6 +1,9 @@
-﻿// Задача 73: Есть число N. Сколько групп M, можно получить при разбиении всех чисел на группы, так чтобы в одной группе все числа были взаимно просты (все числа в группе друг на друга не делятся)? Найдите M при заданном N и получите одно из разбиений на группы N ≤ 10²⁰. Можно использовать рекурсию.
+﻿// Задача 73: Есть число N. Сколько групп M, можно получить при разбиении всех чисел на группы, 
+// так чтобы в одной группе все числа в группе друг на друга не делятся)? 
+// Найдите M при заданном N и получите одно из разбиений на группы N ≤ 10²⁰. Можно использовать рекурсию.
 
-int n = InputNumbers("Введите число N: ");
+Console.WriteLine("Введите число N: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
 int[] tempArray = CreateArray(n);
 CreateRows(tempArray);
@@ -46,12 +49,6 @@ void CreateRows(int[] arrayCheck)
   }
 }
 
-int InputNumbers(string input)
-{
-  Console.Write(input);
-  int output = Convert.ToInt32(Console.ReadLine());
-  return output;
-}
 
 int[] CreateArray(int n)
 {
